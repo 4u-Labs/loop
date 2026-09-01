@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Suporte — Loop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-app: #030508;
+      --bg-card: rgba(12, 17, 26, 0.85);
+      --border-color: rgba(0, 210, 255, 0.25);
+      --text-primary: #ffffff;
+      --text-secondary: #c2d2e3;
+      --text-muted: #7d90a6;
+      --accent-cyan: #00D2FF;
+      --accent-purple: #bb66ff;
+      --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.85);
+      --shadow-glow: 0 0 14px rgba(0, 210, 255, 0.25);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    
+    body {
+      background-color: var(--bg-app);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .logo-area {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #090d16 0%, #030508 100%);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-glow);
+      margin-bottom: 20px;
+    }
+    
+    .logo-icon {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #fff 0%, var(--text-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .subtitle {
+      color: var(--accent-cyan);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+    }
+    
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-top: 30px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(0, 210, 255, 0.15);
+      padding-bottom: 6px;
+    }
+    
+    h2:first-of-type {
+      margin-top: 0;
+    }
+    
+    h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    
+    p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin-bottom: 16px;
+      padding-left: 5px;
+    }
+    
+    li {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    li::before {
+      content: "🛡️";
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    
+    strong {
+      color: #fff;
+    }
+    
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    
+    a:hover {
+      color: #00f0ff;
+      text-decoration: underline;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px dashed var(--border-color);
+      width: 100%;
+    }
+    
+    footer p {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    
+    .faq-box {
+      background: rgba(0, 210, 255, 0.02);
+      border: 1px solid rgba(0, 210, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-area">
+        <span class="logo-icon">∞</span>
+      </div>
+      <h1>Central de Suporte</h1>
+      <p class="subtitle">Atendimento ao Usuário Loop</p>
+    </header>
+    
+    <main class="card">
+      <p>Bem-vindo à Central de Suporte oficial do Loop. Estamos aqui para ajudar a resolver problemas, tirar dúvidas e processar feedbacks de homologação do aplicativo.</p>
+
+      <h2>Perguntas Frequentes (FAQ)</h2>
+      
+      <div class="faq-box">
+        <h3>1. Como faço para efetuar o login no Loop?</h3>
+        <p>O Loop não armazena ou solicita senhas tradicionais. O acesso é feito digitando seu e-mail na tela inicial e digitando o código OTP temporário de 6 dígitos enviado para sua caixa de entrada de e-mail.</p>
+      </div>
+
+      <div class="faq-box">
+        <h3>2. O que é e como funciona a criptografia ponta a ponta (E2EE)?</h3>
+        <p>A criptografia ponta a ponta garante que apenas você e a pessoa com quem está conversando possam ler o conteúdo enviado. Suas chaves privadas Curve25519 são armazenadas localmente no seu dispositivo e nunca saem dele. Nem mesmo nossa equipe pode descriptografar suas conversas.</p>
+      </div>
+
+      <div class="faq-box">
+        <h3>3. Por que o aplicativo solicita permissões de rede?</h3>
+        <p>A permissão de rede é necessária para permitir a troca de mensagens em tempo real através dos nossos servidores e o envio de requisições de processamento de IA ao assistente central Keep AI de forma segura.</p>
+      </div>
+
+      <div class="faq-box">
+        <h3>4. Como posso apagar todos os meus dados?</h3>
+        <p>Você pode excluir permanentemente seu perfil e dados no Loop a qualquer momento. Basta ir na guia "Meu Perfil", localizar o painel de segurança e clicar em "Resetar". Isso apagará instantaneamente todas as mensagens, chaves criptográficas e registros localmente e na base de dados do servidor.</p>
+      </div>
+
+      <h2>Entrar em Contato</h2>
+      <p>Caso tenha outras dúvidas, bugs a reportar ou sugestões de novas integrações de IA, envie uma mensagem através do nosso <a href="https://4u.ia.br/#contact" target="_blank">Formulário de Contato</a> oficial.</p>
+      <ul>
+        <li><strong>Tempo Médio de Atendimento:</strong> Menos de 24 horas úteis.</li>
+      </ul>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Loop. Todos os direitos reservados. Feito com amor por <a href="https://4u.ia.br" target="_blank">4u.ia.br</a></p>
+    </footer>
+  </div>
+</body>
+</html>
