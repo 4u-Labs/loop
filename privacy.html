@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Loop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-app: #030508;
+      --bg-card: rgba(12, 17, 26, 0.85);
+      --border-color: rgba(0, 210, 255, 0.25);
+      --text-primary: #ffffff;
+      --text-secondary: #c2d2e3;
+      --text-muted: #7d90a6;
+      --accent-cyan: #00D2FF;
+      --accent-purple: #bb66ff;
+      --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.85);
+      --shadow-glow: 0 0 14px rgba(0, 210, 255, 0.25);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    
+    body {
+      background-color: var(--bg-app);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .logo-area {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #090d16 0%, #030508 100%);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-glow);
+      margin-bottom: 20px;
+    }
+    
+    .logo-icon {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #fff 0%, var(--text-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .subtitle {
+      color: var(--accent-cyan);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+    }
+    
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-top: 30px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(0, 210, 255, 0.15);
+      padding-bottom: 6px;
+    }
+    
+    h2:first-of-type {
+      margin-top: 0;
+    }
+    
+    p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin-bottom: 16px;
+      padding-left: 5px;
+    }
+    
+    li {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    li::before {
+      content: "⚡";
+      color: var(--accent-purple);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    
+    strong {
+      color: #fff;
+    }
+    
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    
+    a:hover {
+      color: #00f0ff;
+      text-decoration: underline;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px dashed var(--border-color);
+      width: 100%;
+    }
+    
+    footer p {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    
+    .highlight-box {
+      background: rgba(187, 102, 255, 0.05);
+      border-left: 3px solid var(--accent-purple);
+      padding: 15px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 20px;
+    }
+    
+    .highlight-box p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-area">
+        <span class="logo-icon">∞</span>
+      </div>
+      <h1>Política de Privacidade</h1>
+      <p class="subtitle">Aplicativo Loop - Mensagens & IA</p>
+    </header>
+    
+    <main class="card">
+      <p><strong>Última atualização:</strong> 11 de junho de 2026</p>
+      
+      <div class="highlight-box">
+        <p>A sua privacidade é nossa prioridade absoluta. O Loop foi desenvolvido sob o conceito de "privacy-by-design", onde a segurança e a soberania dos dados do usuário vêm em primeiro lugar.</p>
+      </div>
+
+      <h2>1. Propósito Exclusivo da Aplicação</h2>
+      <p>O <strong>Loop - Mensagens & IA</strong> é um ecossistema de comunicação descentralizado que permite troca de mensagens seguras, criação de grupos corporativos ou comunitários, e consultas de inteligência artificial via assistente Loop AI de forma integrada.</p>
+      
+      <h2>2. Coleta de Dados e Finalidade</h2>
+      <p>Coletamos apenas as informações estritamente necessárias para o funcionamento seguro da aplicação:</p>
+      <ul>
+        <li><strong>Informações de Identificação Pessoal (E-mail):</strong> Solicitamos seu e-mail institucional ou pessoal voluntariamente no login para envio do código de autenticação único de uso único (OTP).</li>
+        <li><strong>Informações de Autenticação (OTP):</strong> O código de 6 dígitos enviado por e-mail é verificado de forma temporária e imediatamente invalidado após a confirmação do login. Não utilizamos senhas estáticas em nossos servidores.</li>
+        <li><strong>Dados do Perfil:</strong> Nome de exibição, nome de usuário (@username) e avatar emoji escolhidos durante o cadastro do perfil.</li>
+      </ul>
+      
+      <h2>3. Armazenamento de Dados no Dispositivo</h2>
+      <p>Para garantir máxima performance offline e segurança contra vazamento de credenciais centralizadas:</p>
+      <ul>
+        <li><strong>Sessões e Chaves:</strong> A sessão do usuário e as chaves públicas/privadas Curve25519 utilizadas na criptografia de ponta a ponta (E2EE) são salvas <strong>exclusivamente no armazenamento local do dispositivo</strong> (via <code>localStorage</code> e <code>IndexedDB</code>).</li>
+        <li><strong>Mensagens Locais:</strong> Um cache criptografado do histórico de mensagens é guardado localmente para permitir navegação instantânea.</li>
+        <li><strong>Modo Ultra Seguro:</strong> Se habilitado no perfil, o aplicativo ativa a auto-destruição e remove do dispositivo do remetente e do destinatário quaisquer dados de mensagens com mais de 24 horas.</li>
+      </ul>
+
+      <h2>4. Permissões de Host e Rede</h2>
+      <p>O aplicativo requer permissões de rede para se comunicar de forma segura com servidores remotos:</p>
+      <ul>
+        <li><strong>Comunicação de API:</strong> Conecta-se ao domínio seguro <code>https://4u.ia.br/</code> para envio e recebimento de mensagens criptografadas e sincronização de dados via SSE (Server-Sent Events).</li>
+        <li><strong>Assistente Loop AI / Central Keep AI:</strong> O aplicativo faz requisições HTTPS para a API unificada Keep AI da <code>4u.ia.br</code> para enviar trechos de texto para a inteligência artificial realizar resumos, extrair tarefas e traduzir chats.</li>
+      </ul>
+
+      <h2>5. Criptografia de Ponta a Ponta (E2EE)</h2>
+      <p>Todas as conversas privadas entre usuários utilizam criptografia ponta a ponta natively. As chaves criptográficas de criptografia simétrica (AES-GCM) são negociadas localmente via Diffie-Hellman (Curve25519). O servidor atua apenas como canal de transporte seguro das cargas cifradas, não possuindo acesso à chave privada de decifragem em momento algum.</p>
+
+      <h2>6. Não Compartilhamento e Segurança de Dados</h2>
+      <p>Assumimos o compromisso formal de cumprir todas as políticas de segurança de dados do Google Play e Chrome Web Store:</p>
+      <ul>
+        <li><strong>Sem Comercialização:</strong> Nós <strong>nunca vendemos, alugamos ou comercializamos</strong> quaisquer dados pessoais ou e-mails de usuários.</li>
+        <li><strong>Sem Rastreamento de Terceiros:</strong> O aplicativo não contém SDKs de publicidade ou ferramentas de rastreamento comportamental de terceiros.</li>
+        <li><strong>Apagamento Total (Reset):</strong> O usuário pode, a qualquer momento, clicar no botão "Resetar" nas configurações do perfil para apagar completamente todas as conversas, anexos, chaves e dados da conta localmente e no servidor SQLite.</li>
+      </ul>
+
+      <h2>7. Contato e Suporte</h2>
+      <p>Para dúvidas, suporte técnico ou solicitações de remoção de dados, entre em contato através de nossa página de suporte ou envie uma mensagem diretamente pelo nosso <a href="https://4u.ia.br/#contact" target="_blank">Formulário de Contato</a> oficial.</p>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Loop. Todos os direitos reservados. Feito com amor por <a href="https://4u.ia.br" target="_blank">4u.ia.br</a></p>
+    </footer>
+  </div>
+</body>
+</html>
