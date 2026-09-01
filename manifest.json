@@ -1,0 +1,33 @@
+{
+  "id": "loop-messenger-pwa",
+  "short_name": "Loop",
+  "name": "Loop - Mensageiro com IA & Criptografia",
+  "description": "Mensageiro inteligente com IA e criptografia",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#030508",
+  "theme_color": "#00f0ff",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/icon48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "maskable"
+    }
+  ]
+}
